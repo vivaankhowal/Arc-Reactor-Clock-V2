@@ -1,6 +1,3 @@
-//THIS IS THE EXACT CODE I USED FOR V1 OF THE CLOCK
-//I DIDN'T HAVE TO CHANGE ANYTHING SINCE IT WILL WORK THE SAME AND USES THE SAME COMPONENTS AS V1
-//THAT IS WHY I DIDN'T LOG ANY CODING TIME BECAUSE THIS CODE WAS ALREADY PREMADE
 #include <BLEDevice.h>
 #include <BLEServer.h>
 #include <BLEUtils.h>
@@ -13,15 +10,15 @@
 #define SERVICE_UUID        "12345678-1234-1234-1234-123456789abc"
 #define CHARACTERISTIC_UUID "abcd1234-5678-90ab-cdef-1234567890ab"
 
-// ================== UPDATED PINOUT FOR ESP32 ==================
-#define NEOPIXEL_PIN 5      // D3 → GPIO5
+// ================== UPDATED PINOUT FOR XIAO ESP32-C3 ==================
+#define NEOPIXEL_PIN 6      
 #define NUM_PIXELS   35
 
-#define TM1637_CLK   4      // D2 → GPIO4
-#define TM1637_DIO   3      // D1 → GPIO3
+#define TM1637_CLK   D1      
+#define TM1637_DIO   D2      
 
-#define BUZZER_PIN   10     // D10 → GPIO10
-#define BUTTON_PIN   9      // D9 → GPIO8
+#define BUZZER_PIN   2     
+#define BUTTON_PIN   7     
 // ======================================================================
 
 Adafruit_NeoPixel pixels(NUM_PIXELS, NEOPIXEL_PIN, NEO_GRB + NEO_KHZ800);
