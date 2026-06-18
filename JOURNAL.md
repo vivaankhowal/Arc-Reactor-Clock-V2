@@ -21,11 +21,17 @@ Today I finished the electronics casing and the magnetic attachments to snap on 
 
 Total time spent: About 1 hr 30 mins
 
-# June 6: Finished the project
-Today I refined the project by adding the finishing details like my logo and the holes to route the wires anywhere I need to, and polished the onshape project file as well, and with that the project is officialy done.
+# June 6: Finished the CAD
+Today I refined the project by adding the finishing details like my logo and the holes to route the wires anywhere I need to, and polished the onshape project file as well, and with that the CAD is officialy done.
 
 <a href="https://lapse.hackclub.com/timelapse/f_prD0hwPZZw">Sixth and Final timelapse</a>
 <p></p>
 
 Total time spent: About 30 mins
+
+# June 16: Finished the project
+No lapse today, today was just assembling the actual clock. That's it.
+
+Total time spent: About 5 hrs
+
 
