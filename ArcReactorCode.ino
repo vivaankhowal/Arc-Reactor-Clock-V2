@@ -10,7 +10,7 @@
 #define SERVICE_UUID        "12345678-1234-1234-1234-123456789abc"
 #define CHARACTERISTIC_UUID "abcd1234-5678-90ab-cdef-1234567890ab"
 
-// ================== UPDATED PINOUT FOR XIAO ESP32-C3 ==================
+// ================== Defining pins for all the components ==================
 #define NEOPIXEL_PIN 6      
 #define NUM_PIXELS   35
 
@@ -51,7 +51,7 @@ uint8_t beepStep = 0;
 unsigned long stepDeadline = 0;
 
 
-// ================== BEEP PATTERN ==================
+// ================== The beep pattern ==================
 inline void startBeepPattern() {
   beepStep = 0;
   digitalWrite(BUZZER_PIN, BEEP_LEVELS[0] ? HIGH : LOW);
@@ -70,7 +70,6 @@ inline void updateBeepPattern() {
 }
 
 
-// ================== HELPERS ==================
 void setAllPixels(uint8_t r, uint8_t g, uint8_t b) {
   lastR = r; lastG = g; lastB = b;
   if (!rainbowMode) {
@@ -106,7 +105,7 @@ void playTripleBeep() {
 }
 
 
-// ================== TIME ==================
+// ================== Time Calculation ==================
 bool parseTimeHHMM(const String& s, int &h, int &m) {
   int sep = s.indexOf(':'); if (sep < 0) return false;
   h = s.substring(0, sep).toInt();
@@ -144,7 +143,7 @@ void getCurrentTime(int &y, int &mo, int &d, int &dow, int &h, int &m, int &s) {
 }
 
 
-// ================== ALARM ==================
+// ================== Alarm Code ==================
 void triggerAlarm() {
   Serial.println("ALARM TRIGGERED!");
 
@@ -190,7 +189,6 @@ void updateAlarmVisuals() {
 }
 
 
-// ================== BLE CALLBACK ==================
 class MyCallbacks : public BLECharacteristicCallbacks {
   void onWrite(BLECharacteristic* pCharacteristic) override {
     String received = String((char*)pCharacteristic->getData(), pCharacteristic->getValue().length());
@@ -274,7 +272,7 @@ class MyCallbacks : public BLECharacteristicCallbacks {
 };
 
 
-// ================== SETUP ==================
+// ================== Setup ==================
 void setup() {
   Serial.begin(115200);
   pinMode(BUZZER_PIN, OUTPUT);
@@ -307,7 +305,7 @@ void setup() {
 }
 
 
-// ================== LOOP ==================
+// ================== Loop ==================
 void loop() {
   int y, mo, d, dow, h, m, s;
   getCurrentTime(y, mo, d, dow, h, m, s);
