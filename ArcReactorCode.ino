@@ -1,3 +1,4 @@
+//To send commands, download the nRF Connect App. Once downloaded, go to the scanner tab and click the tactile button on the clock. The clock should play 3 beeps and then refresh your app. The clock should show up as ESP32-BLE-Clock. Connect to it, press the up arrow on the bottom left to send a command. Set the type to UTF8 for every command, type the command, and click write to send.
 #include <BLEDevice.h>
 #include <BLEServer.h>
 #include <BLEUtils.h>
